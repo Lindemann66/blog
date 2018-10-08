@@ -1,2 +1,5 @@
 h1 Welcome to my Blog
-p wow, you visit #{session[:times_here]} times
+p.alert.alert-primary wow, you visit #{session[:times_here]} times
+
+= render "components/page/page" do
+  p.alert.alert-success Hello from our first component!

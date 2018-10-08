@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    session[:times_here] ||= 0
-    session[:times_here] += 1
+    FeedbackMailer.new.send_mail.deliver
   end
 end
